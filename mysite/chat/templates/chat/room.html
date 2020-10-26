@@ -3,15 +3,352 @@
 <html>
 <head>
     <meta charset="utf-8"/>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <title>Chat Room</title>
+    <style>
+body {
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.pointer_none {
+    pointer-events:none;
+}
+
+.pointer_auto {
+    pointer-events:auto;
+}
+
+/*main content*/
+
+.content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    outline: 1px solid black;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items:center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-evenly;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    min-height: 100vh;
+    min-width: 100hh;
+}
+
+td {
+    cursor: pointer;
+}
+
+.main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+}
+    </style>
 </head>
 <body>
-    <textarea id="chat-log" cols="100" rows="20"></textarea><br/>
-    <input id="chat-message-input" type="text" size="100"/><br/>
-    <input id="chat-message-submit" type="button" value="Send"/>
+    <div class = 'content'>
+        <div class = 'header'>
+        </div>
+        <div class = 'main'>
+            <table border="1" width="100%" cellpadding="20" id  = 'dadaya'>
+                <tr>
+                    <td id = '00'></td>
+                    <td id = '01'></td>
+                    <td id = '02'></td>
+                    <td id = '03'></td>
+                    <td id = '04'></td>
+                    <td id = '05'></td>
+                    <td id = '06'></td>
+                    <td id = '07'></td>
+                    <td id = '08'></td>
+                    <td id = '09'></td>
+                </tr>
+                <tr>
+                    <td id = '10'></td>
+                    <td id = '11'></td>
+                    <td id = '12'></td>
+                    <td id = '13'></td>
+                    <td id = '14'></td>
+                    <td id = '15'></td>
+                    <td id = '16'></td>
+                    <td id = '17'></td>
+                    <td id = '18'></td>
+                    <td id = '19'></td>
+                </tr>
+                <tr>
+                    <td id = '20'></td>
+                    <td id = '21'></td>
+                    <td id = '22'></td>
+                    <td id = '23'></td>
+                    <td id = '24'></td>
+                    <td id = '25'></td>
+                    <td id = '26'></td>
+                    <td id = '27'></td>
+                    <td id = '28'></td>
+                    <td id = '29'></td>
+                </tr>
+                <tr>
+                    <td id = '30'></td>
+                    <td id = '31'></td>
+                    <td id = '32'></td>
+                    <td id = '33'></td>
+                    <td id = '34'></td>
+                    <td id = '35'></td>
+                    <td id = '36'></td>
+                    <td id = '37'></td>
+                    <td id = '38'></td>
+                    <td id = '39'></td>
+                </tr>
+                <tr>
+                    <td id = '40'></td>
+                    <td id = '41'></td>
+                    <td id = '42'></td>
+                    <td id = '43'></td>
+                    <td id = '44'></td>
+                    <td id = '45'></td>
+                    <td id = '46'></td>
+                    <td id = '47'></td>
+                    <td id = '48'></td>
+                    <td id = '49'></td>
+                </tr>
+                <tr>
+                    <td id = '50'></td>
+                    <td id = '51'></td>
+                    <td id = '52'></td>
+                    <td id = '53'></td>
+                    <td id = '54'></td>
+                    <td id = '55'></td>
+                    <td id = '56'></td>
+                    <td id = '57'></td>
+                    <td id = '58'></td>
+                    <td id = '59'></td>
+                </tr>
+                <tr>
+                    <td id = '60'></td>
+                    <td id = '61'></td>
+                    <td id = '62'></td>
+                    <td id = '63'></td>
+                    <td id = '64'></td>
+                    <td id = '65'></td>
+                    <td id = '66'></td>
+                    <td id = '67'></td>
+                    <td id = '68'></td>
+                    <td id = '69'></td>
+                </tr>
+                <tr>
+                    <td id = '70'></td>
+                    <td id = '71'></td>
+                    <td id = '72'></td>
+                    <td id = '73'></td>
+                    <td id = '74'></td>
+                    <td id = '75'></td>
+                    <td id = '76'></td>
+                    <td id = '77'></td>
+                    <td id = '78'></td>
+                    <td id = '79'></td>
+                </tr>
+                <tr>
+                    <td id = '80'></td>
+                    <td id = '81'></td>
+                    <td id = '82'></td>
+                    <td id = '83'></td>
+                    <td id = '84'></td>
+                    <td id = '85'></td>
+                    <td id = '86'></td>
+                    <td id = '87'></td>
+                    <td id = '88'></td>
+                    <td id = '89'></td>
+                </tr>
+                <tr>
+                    <td id = '90'></td>
+                    <td id = '91'></td>
+                    <td id = '92'></td>
+                    <td id = '93'></td>
+                    <td id = '94'></td>
+                    <td id = '95'></td>
+                    <td id = '96'></td>
+                    <td id = '97'></td>
+                    <td id = '98'></td>
+                    <td id = '99'></td>
+                </tr>
+            </table>
+            <input id="get_area_btn" type="button" value="Get Area"/><br/>
+    <input id="submit_turn" type="button" value="Submin turn"/><br/>
+    <form method='POST'><input id = 'join_room' type="submit" value="Join Room"></form>
+    <textarea id = 'value_x' style='display:none;' cols='1' rows='1'></textarea>
+    <textarea id = 'value_y' style='display:none;' cols='1' rows='1'></textarea>
+    <textarea id = 'value_max' cols = "40" rows = "2"></textarea>
+    <textarea id = 'result_game' cols = "40" rows = "2"></textarea>
+        </div>
+    </div>
 </body>
-<script>
+<script>   
     var roomName = {{ room_name_json }};
+    var room_status = {{ room_status }};
+    var status_user = {{ status_user }};
+    var user = {{ user }};
+    var step = {{ step }};
+    var user_arr = {{ user_arr }};
+    var user_x_max = {{ user_x_max }};
+    var user_y_max = {{ user_y_max }};
+    var arr_one = {{ arr_one }};
+    var arr_two = {{ arr_two }};
+    var ToReturn = new Array();
+     
+    var table_arr = new Array();
+    for (var i = 0; i < 100; ++i) {
+        if (i < 10) {
+            table_arr.push("0" + i.toString());
+            document.getElementById("0" + i.toString()).classList.add("pointer_none");
+        } else {
+            table_arr.push(i.toString());
+            document.getElementById(i.toString()).classList.add("pointer_none");
+        };
+    };
+
+    arr_one = arr_one.split(" ");
+    var p = new Array();
+    for (var i = 0; i < arr_one.length; ++i) {
+        if (table_arr.includes(arr_one[i])) {
+            p.push(arr_one[i]);
+        }
+    };
+    arr_one = p;
+    arr_two = arr_two.split(" ");
+    var p = new Array();
+    for (var i = 0; i < user_arr.length; ++i) {
+        if (table_arr.includes(arr_two[i])) {
+            p.push(arr_two[i]);
+        }
+    };
+    arr_two = p;
+    user_arr = user_arr.split(" ");
+    var p = new Array();
+    for (var i = 0; i < user_arr.length; ++i) {
+        if (table_arr.includes(user_arr[i])) {
+            p.push(user_arr[i]);
+        }
+    };
+    user_arr = p;
+
+    if (arr_one[0] == user_arr[0]) {
+        var one = true;
+    } else {
+        var one = false;
+    };
+
+    var available = new Array();
+    if (one) {
+        var enemy_arr = arr_two;
+    } else {
+        var enemy_arr = arr_one;
+    };
+    var e_arr = new Array();
+    for (var i = 0; i < enemy_arr.length; ++i) {
+        e_arr.push(Number(enemy_arr[i]));
+    };
+    var result = new Array();
+    for (var i = 0; i < user_arr.length; ++i) {
+        a = Number(user_arr[i]);
+        if ([0, 10, 20, 30, 40, 50, 60, 70, 80, 90].includes(a)) {
+            c = -100;
+            g = -100;
+            j = -100;
+            b = a + 1;
+            d = a + 10;
+            e = a - 10;
+            f = d + 1;
+            h = e + 1;
+        } else {
+            if ([9, 19, 29, 39, 49, 59, 69, 79, 89, 99].includes(a)) {
+                b = 100;
+                f = 100;
+                h = 100;
+                c = a - 1;
+                d = a + 10;
+                e = a - 10;
+                g = d - 1;
+                j = e - 1;
+            } else {
+                b = a + 1;
+                c = a - 1;
+                d = a + 10;
+                e = a - 10;
+                f = d + 1;
+                g = d - 1;
+                h = e + 1;
+                j = e - 1;
+            };
+        };
+        mas = [a, b, c, d, e, f, g, h, j];
+        for (var q = 0; q < mas.length; ++q) {
+            if (mas[q] < 100 && mas[q] > 0 && !e_arr.includes(mas[q])) {
+                result.push(mas[q]);
+            };
+        };        
+    };
+    for (var i = 0; i < result.length; ++i) {
+        if (!available.includes(result[i])) {
+            available.push(result[i]);
+        };
+    };
+    
+    var available_str = new Array();
+
+    for (var i = 0; i < available.length; ++i) {
+        if (available[i] < 10) {
+            available_str.push("0" + available[i].toString());
+        } else {
+            available_str.push(available[i].toString());
+        };
+    };
+
+    arr_one.forEach(function(e) {
+        document.getElementById(e).style.backgroundColor = '#cbc3f7';
+    });
+
+    arr_two.forEach(function(e) {
+        document.getElementById(e).style.backgroundColor = '#CC0000';
+    });
+
+    if (room_status == '1') {
+        document.querySelector('#join_room').disabled = true;
+    };
+
+    if (status_user == '0') {
+        document.querySelector('#get_area_btn').disabled = true;
+        for (var i = 0; i < available_str.length; ++i) {
+            document.getElementById(available_str[i]).classList.remove("pointer_none");
+        };
+    };
+
+    if (step == '0' || status_user == '1') {
+        document.querySelector('#submit_turn').disabled = true;
+    };
+
+    document.querySelector("#result_game").value = "Blue player has " + arr_one.length + ". Red player has " + arr_two.length;
 
     var chatSocket = new WebSocket(
         'ws://' + window.location.host +
@@ -19,30 +356,427 @@
 
     chatSocket.onmessage = function(e) {
         var data = JSON.parse(e.data);
-        var message = data['message'];
-        document.querySelector('#chat-log').value += (message + '\n');
+        var message = data['user'];
+        var a_e = data['userTurn'];
+        var r_arr_one = data['r_arr_one']
+        var r_arr_two = data['r_arr_two']
+        r_arr_one = r_arr_one.split(" ");
+        r_arr_two = r_arr_two.split(" "); 
+        var p = new Array();
+        for (var i = 0; i < r_arr_one.length; ++i) {
+            if (table_arr.includes(r_arr_one[i])) {
+                p.push(r_arr_one[i]);
+            };
+        };
+        r_arr_one = p;
+        var p = new Array();
+        for (var i = 0; i < r_arr_two.length; ++i) {
+            if (table_arr.includes(r_arr_two[i])) {
+                p.push(r_arr_two[i]);
+            };
+        };
+        r_arr_two = p;
+        for (var i = 0; i < r_arr_one.length; ++i) {
+            document.getElementById(r_arr_one[i]).style.backgroundColor = '#cbc3f7';
+        };
+        for (var i = 0; i < r_arr_two.length; ++i) {
+            document.getElementById(r_arr_two[i]).style.backgroundColor = '#CC0000';
+        };
+        if (message != user) {
+            document.getElementById("get_area_btn").disabled = false; 
+        };
+        document.querySelector("#result_game").value = "Blue player has " + r_arr_one.length + ". Red player has " + r_arr_two.length;
+        var available = new Array();
+        if (one) {
+            var enemy_arr = r_arr_two;
+        } else {
+            var enemy_arr = r_arr_one;
+        };
+        var result = new Array(); 
+        for (var i = 0; i < user_arr.length; ++i) {
+            a = Number(user_arr[i]);
+            if ([0, 10, 20, 30, 40, 50, 60, 70, 80, 90].includes(a)) {
+                c = -100;
+                g = -100;
+                j = -100;
+                b = a + 1;
+                d = a + 10;
+                e = a - 10;
+                f = d + 1;
+                h = e + 1;
+            } else {
+                if ([9, 19, 29, 39, 49, 59, 69, 79, 89, 99].includes(a)) {
+                    b = 100;
+                    f = 100;
+                    h = 100;
+                    c = a - 1;
+                    d = a + 10;
+                    e = a - 10;
+                    g = d - 1;
+                    j = e - 1;
+                } else {
+                    b = a + 1;
+                    c = a - 1;
+                    d = a + 10;
+                    e = a - 10;
+                    f = d + 1;
+                    g = d - 1;
+                    h = e + 1;
+                    j = e - 1;
+                };
+            };
+            mas = [a, b, c, d, e, f, g, h, j];
+            for (var q = 0; q < mas.length; ++q) {
+                if (mas[q] < 100 && mas[q] > 0 && !e_arr.includes(mas[q])) {
+                    result.push(mas[q]);
+                };
+            };
+        };
+        for (var i = 0; i < result.length; ++i) {
+            if (!available.includes(result[i])) {
+                available.push(result[i]);
+            };
+        };
+        var available_str = new Array();
+        for (var i = 0; i < available.length; ++i) {
+            if (available[i] < 10) {
+                available_str.push("0" + available[i].toString());
+            } else {
+                available_str.push(available[i].toString());
+            };
+        };
     };
 
     chatSocket.onclose = function(e) {
         console.error('Chat socket closed unexpectedly');
     };
 
-    document.querySelector('#chat-message-input').focus();
-    document.querySelector('#chat-message-input').onkeyup = function(e) {
-        if (e.keyCode === 13) {  // enter, return
-            document.querySelector('#chat-message-submit').click();
+    document.querySelector("#submit_turn").onclick = function(e) {
+        chatSocket.send(JSON.stringify({'ToReturn': ToReturn}));
+        for (var i = 0; i < table_arr.length; ++i) {
+            document.getElementById(table_arr[i]).classList.add('pointer_none');
+            document.getElementById(table_arr[i]).style.backgroundColor = '#FFFFFF';
+        };
+        if (one) {
+            for (var i = 0; i < user_arr.length; ++i) {
+                document.getElementById(user_arr[i]).style.backgroundColor = '#cbc3f7';
+            };
+            for (var i = 0; i < arr_two.length; ++i) {
+                document.getElementById(arr_two[i]).style.backgroundColor = '#CC0000';
+            };
+        } else {
+            for (var i = 0; i < user_arr.length; ++i) {
+                document.getElementById(user_arr[i]).style.backgroundColor = '#CC0000';
+            };
+            for (var i = 0; i < arr_one.length; ++i) {
+                document.getElementById(arr_one[i]).style.backgroundColor = '#cbc3f7';
+            };
+        };
+        var available = new Array();
+        if (one) {
+            var enemy_arr = arr_two;
+        } else {
+            var enemy_arr = arr_one;
+        };
+        var result = new Array(); 
+        for (var i = 0; i < user_arr.length; ++i) {
+            a = Number(user_arr[i]);
+            if ([0, 10, 20, 30, 40, 50, 60, 70, 80, 90].includes(a)) {
+                c = -100;
+                g = -100;
+                j = -100;
+                b = a + 1;
+                d = a + 10;
+                e = a - 10;
+                f = d + 1;
+                h = e + 1;
+            } else {
+                if ([9, 19, 29, 39, 49, 59, 69, 79, 89, 99].includes(a)) {
+                    b = 100;
+                    f = 100;
+                    h = 100;
+                    c = a - 1;
+                    d = a + 10;
+                    e = a - 10;
+                    g = d - 1;
+                    j = e - 1;
+                } else {
+                    b = a + 1;
+                    c = a - 1;
+                    d = a + 10;
+                    e = a - 10;
+                    f = d + 1;
+                    g = d - 1;
+                    h = e + 1;
+                    j = e - 1;
+                };
+            };
+            mas = [a, b, c, d, e, f, g, h, j];
+            for (var q = 0; q < mas.length; ++q) {
+                if (mas[q] < 100 && mas[q] > 0 && !e_arr.includes(mas[q])) {
+                    result.push(mas[q]);
+                };
+            };
+        };
+        for (var i = 0; i < result.length; ++i) {
+            if (!available.includes(result[i])) {
+                available.push(result[i]);
+            };
+        };
+        var available_str = new Array();
+        for (var i = 0; i < available.length; ++i) {
+            if (available[i] < 10) {
+                available_str.push("0" + available[i].toString());
+            } else {
+                available_str.push(available[i].toString());
+            };
+        };
+        document.querySelector('#submit_turn').disabled = true;
+        document.querySelector("#result_game").value = "Blue player has " + arr_one.length + ". Red player has " + arr_two.length;
+    };
+
+    document.querySelector("#get_area_btn").onclick = function(e) {
+        var available = new Array();
+        if (one) {
+            var enemy_arr = arr_two;
+        } else {
+            var enemy_arr = arr_one;
+        };
+        var result = new Array(); 
+        for (var i = 0; i < user_arr.length; ++i) {
+            a = Number(user_arr[i]);
+            if ([0, 10, 20, 30, 40, 50, 60, 70, 80, 90].includes(a)) {
+                c = -100;
+                g = -100;
+                j = -100;
+                b = a + 1;
+                d = a + 10;
+                e = a - 10;
+                f = d + 1;
+                h = e + 1;
+            } else {
+                if ([9, 19, 29, 39, 49, 59, 69, 79, 89, 99].includes(a)) {
+                    b = 100;
+                    f = 100;
+                    h = 100;
+                    c = a - 1;
+                    d = a + 10;
+                    e = a - 10;
+                    g = d - 1;
+                    j = e - 1;
+                } else {
+                    b = a + 1;
+                    c = a - 1;
+                    d = a + 10;
+                    e = a - 10;
+                    f = d + 1;
+                    g = d - 1;
+                    h = e + 1;
+                    j = e - 1;
+                };
+            };
+            mas = [a, b, c, d, e, f, g, h, j];
+            for (var q = 0; q < mas.length; ++q) {
+                if (mas[q] < 100 && mas[q] > 0 && !e_arr.includes(mas[q])) {
+                    result.push(mas[q]);
+                };
+            };
+        };
+        for (var i = 0; i < result.length; ++i) {
+            if (!available.includes(result[i])) {
+                available.push(result[i]);
+            };
+        };
+        var available_str = new Array();
+        for (var i = 0; i < available.length; ++i) {
+            if (available[i] < 10) {
+                available_str.push("0" + available[i].toString());
+            } else {
+                available_str.push(available[i].toString());
+            };
+        };
+        for (var i = 0; i < available_str.length; ++i) {
+            document.getElementById(available_str[i]).classList.remove("pointer_none");
+        };
+                $.ajax({
+                    url: "/take_numbers",
+            data: {
+                result: document.innerHTML
+            },
+                    dataType: "json",
+                        timeout: 1e4,
+                        success: function(result) {
+                            chatSocket.send(JSON.stringify({'max_x':result.height, 'max_y':result.lenght})); 
+                            document.querySelector("#value_max").value = 'Max height is ' + result.height + '. Max length is ' + result.lenght;
+                            document.querySelector("#get_area_btn").disabled = true;
+                            document.querySelector("#value_x").value = result.lenght;
+                            document.querySelector("#value_y").value = result.height;
+                            document.querySelector("#submit_turn").disabled = false; 
+                        },
+                        error: function() {
+                                console.log("NET");
+            }
+        })
+    };
+    var counter = 0;
+    var prev_target = 0;
+    document.addEventListener("click", function (e) {
+        if (isNaN(Number(e.target.id))) {
+            return;
         }
-    };
-
-    document.querySelector('#chat-message-submit').onclick = function(e) {
-        var messageInputDom = document.querySelector('#chat-message-input');
-        var message = messageInputDom.value;
-        chatSocket.send(JSON.stringify({
-            'message': message
-        }));
-
-        messageInputDom.value = '';
-    };
+        if (counter == 0) {
+            var target = e.target.id;
+            if (one) {
+                var color = "#cbc3f7";
+            } else {
+                var color = "CC0000";
+            };
+            prev_target = target;
+            var turn_array = new Array();
+            var x = Number(document.querySelector("#value_x").value);
+            var y = Number(document.querySelector("#value_y").value);
+            for (var k = 0; k <= y; ++k) {
+                for (var l = 0; l <=x; ++l) {
+                    var d_1 = Number(target) + 10 * k + l;
+                    var d_2 = Number(target) + 10 * k - l;
+                    var d_3 = Number(target) - 10 * k + l;
+                    var d_4 = Number(target) - 10 * k - l;
+                    if (Math.floor(d_1 / 10) == Math.floor(target / 10) + k) {
+                        turn_array.push(Number(target) + 10 * k + l);
+                    };
+                    if (Math.floor(d_2 / 10) == Math.floor(target / 10) + k) {
+                        turn_array.push(Number(target) + 10 * k - l);
+                    };
+                    if (Math.floor(d_3 / 10) == Math.floor(target / 10) - k) {
+                        turn_array.push(Number(target) - 10 * k + l);
+                    };
+                    if (Math.floor(d_4 / 10) == Math.floor(target / 10) - k) {
+                        turn_array.push(Number(target) - 10 * k - l);
+                    };
+                };
+            };
+            if (one) {
+                var enemy_arr = arr_two;
+            } else {
+                var enemy_arr = arr_one;
+            };
+            var e_arr = new Array();
+            for (var i = 0; i < enemy_arr.length; ++i) {
+                e_arr.push(Number(enemy_arr[i]));
+            }; 
+            var result_arr = new Array(); 
+            for (var k = 0; k < turn_array.length; ++k) {
+                if (!result_arr.includes(turn_array[k]) && turn_array[k] >= 0 && turn_array[k] < 100 && !e_arr.includes(turn_array[k])) {
+                    result_arr.push(turn_array[k]);
+                };
+            };
+            var t_arr_str = new Array();
+            for (var k = 0; k < result_arr.length; ++k) {
+                if (result_arr[k] < 10) {
+                    t_arr_str.push("0" + result_arr[k].toString());
+                } else {
+                    t_arr_str.push(result_arr[k].toString());
+                };
+            };
+            for (var k = 0; k < t_arr_str.length; ++k) {
+                document.getElementById(t_arr_str[k]).classList.remove("pointer_none");
+                document.getElementById(t_arr_str[k]).style.backgroundColor = '#FFE4B5';
+            }
+            document.getElementById(target).style.backgroundColor = color;
+            arr_one.forEach(function(rr) {
+                document.getElementById(rr).style.backgroundColor = '#cbc3f7';
+            });
+            arr_two.forEach(function(rr) {
+                document.getElementById(rr).style.backgroundColor = '#CC0000';
+            });
+            counter = 1;
+        } else { 
+            counter = 0;
+            var last_target = e.target.id;
+            var a = Math.floor(Number(last_target) / 10);
+            var b = last_target - a * 10;
+            var a_a = Math.floor(Number(prev_target) / 10);
+            var b_b = prev_target - a_a * 10;
+            var toReturn = new Array(); 
+            if (a >= a_a) {
+                if (b >= b_b) {
+                    for (var k = a_a; k <= a; ++k) {
+                        for (var l = b_b; l <= b; ++l) {
+                            toReturn.push(k * 10 + l);
+                        };
+                    };
+                } else {
+                    for (var k = a_a; k <= a; ++k) {
+                        for (var l = b; l <= b_b; ++l) {
+                            toReturn.push(k * 10 + l);
+                        };
+                    };
+                };
+            } else {
+                if (b >= b_b) {
+                    for (var k = a; k <= a_a; ++k) {
+                        for (var l = b_b; l <= b; ++l) {
+                            toReturn.push(k * 10 + l);
+                        };
+                    };
+                } else {
+                    for (var k = a; k <= a_a; ++k) {
+                        for (var l = b; l <= b_b; ++l) {
+                            toReturn.push(k * 10 + l);
+                        };
+                    };
+                };
+            };
+            if (one) {
+                var enemy_arr = arr_two;
+            } else {
+                var enemy_arr = arr_one;
+            };
+            var e_arr = new Array();
+            for (var i = 0; i < enemy_arr.length; ++i) {
+                e_arr.push(Number(enemy_arr[i]));
+            };
+            alert(e_arr);
+            for (var l = 0; l < toReturn.length - 1; ++l) {
+                if (toReturn[l] < 10) {
+                    if (!e_arr.includes(toReturn[l])) {
+                        ToReturn.push("0" + toReturn[l].toString() + " ");
+                        user_arr.push("0" + toReturn[l].toString());
+                    };
+                } else {
+                    if (!e_arr.includes(toReturn[l])) {
+                        ToReturn.push(toReturn[l].toString() + " ");
+                        user_arr.push(toReturn[l].toString());
+                    };
+                };
+            };
+            if (toReturn[toReturn.length - 1] < 10) {
+                ToReturn.push("0" + toReturn[toReturn.length - 1].toString());
+                user_arr.push("0" + toReturn[toReturn.length - 1].toString());
+            } else {
+                ToReturn.push(toReturn[toReturn.length - 1].toString());
+                user_arr.push(toReturn[toReturn.length - 1].toString());
+            };
+            for (var i = 0; i < table_arr.length; ++i) {
+            document.getElementById(table_arr[i]).classList.add('pointer_none');
+            document.getElementById(table_arr[i]).style.backgroundColor = '#FFFFFF';
+        };
+        if (one) {
+            for (var i = 0; i < user_arr.length; ++i) {
+                document.getElementById(user_arr[i]).style.backgroundColor = '#cbc3f7';
+            };
+            for (var i = 0; i < arr_two.length; ++i) {
+                document.getElementById(arr_two[i]).style.backgroundColor = '#CC0000';
+            };
+        } else {
+            for (var i = 0; i < user_arr.length; ++i) {
+                document.getElementById(user_arr[i]).style.backgroundColor = '#CC0000';
+            };
+            for (var i = 0; i < arr_one.length; ++i) {
+                document.getElementById(arr_one[i]).style.backgroundColor = '#cbc3f7';
+            };
+        };
+        };
+    });
 </script>
 </html>
-
